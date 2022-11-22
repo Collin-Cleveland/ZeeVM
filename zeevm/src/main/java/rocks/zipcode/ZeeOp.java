@@ -145,7 +145,11 @@ public enum ZeeOp {
     DIV("divide") {
         public void execute(String[] args) {
             int second = operandStack.pop();
-            operandStack.push(operandStack.pop() / second);
+            if (second == 0){
+                System.out.println("You cannot divide by 0.");
+                operandStack.push(0);
+            }
+            else operandStack.push(operandStack.pop() / second);
         }
     },
 
