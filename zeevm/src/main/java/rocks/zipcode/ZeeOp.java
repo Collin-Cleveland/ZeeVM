@@ -153,7 +153,7 @@ public enum ZeeOp {
         }
     },
 
-    MOD("modulo") {
+    MOD("mod") {
         public void execute(String[] args) {
             int second = operandStack.pop();
             operandStack.push(operandStack.pop() % second);
